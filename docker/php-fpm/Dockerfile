@@ -12,3 +12,17 @@ RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     RUN apt-get update \
         && apt-get -y install git \
         && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+
+    # Install vim
+    RUN apt-get update \
+        && apt-get -y install vim \
+        && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+
+    # Install php-mysql extension
+#    RUN apt-get update \
+#        && apt-get install -y php-common php-mysql php-cli \
+#        && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+
+    RUN apt-get update && apt-get install -y \
+        && docker-php-ext-install pdo pdo_mysql \
+        && docker-php-ext-enable pdo pdo_mysql
