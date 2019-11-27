@@ -87,7 +87,7 @@
 
                 <div class="links">
                     <a href="http://domikmasterov.zzz.com.ua/">Сайт</a>
-                    <a href="https://localhost/admin/">Админка</a>
+                    <a href="http://localhost/admin/">Админка</a>
                     <a href="https://github.com/MrFigoro/shop">GitHub</a>
                 </div>
             </div>

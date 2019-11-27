@@ -11,6 +11,3 @@ Route::get('/users/create', 'UserController@create')->name('usersCreate')->middl
 Route::post('/users/store', 'UserController@store')->name('usersSave')->middleware('auth');
 Route::get('/users/edit/{id?}', 'UserController@edit')->name('usersEdit')->middleware('auth');
 Route::get('/users/delete/{id}', 'UserController@destroy')->name('usersDelete')->middleware('auth');
-
-Route::get('/pages', 'PageController@index')->name('pages')->middleware('auth');
-Route::post('/pages', 'PageController@all')->name('allPages')->middleware('auth');
